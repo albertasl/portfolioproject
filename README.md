@@ -1,2 +1,2 @@
-# portfolioproject
+# PortfolioProject
 My first portfolio project
