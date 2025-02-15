@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #2c2c2c; /* Pagrindinė spalva */
+  --secondary-color: #292929; /* Akcentinė spalva */
+  --text-color: #111111; /* Teksto spalva */
+  --text-color-header: #e0e0e0; /* Header tekstospalva */
+  --background-color: #aaaaaa; /* Fono spalva */
+  --header-height: 60px; /* Antraštės aukštis */
+  --border-radius: 8px; /* Apvalinimai */
+  --font-size-base: 16px; /* Bazinis šrifto dydis */
+  --nav-menu-color: #b44890;
+}

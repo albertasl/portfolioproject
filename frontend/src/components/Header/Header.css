@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  
+}
+
+h2 {
+  color: var(--text-color-header);
+  margin: 0;
+}
+
+.nav-menu {
+  list-style: none; /* Pašalina kulkas */
+  display: flex; /* Horizontalus mygtukų išdėstymas */
+  justify-content: center; /* Centruoja navigaciją */
+  gap: 1.5rem; /* Tarpai tarp navigacijos elementų */
+  padding: 0; /* Nėra papildomų tarpų meniu */
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color-header);
+  padding: 5px 15px;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--nav-menu-color);
+  background-color: var(--text-color);
+  border-radius: var(--border-radius);
+  border-color: var(--nav-menu-color);
+  box-shadow: 0px 0px 30px var(--nav-menu-color); /* Šviesos spindulių efektas */
+}
+
+.nav-link.active {
+  color: var(--nav-menu-color);
+  border-radius: var(--border-radius);
+  border-color: var(--nav-menu-color);
+}
+
+.profile-link {
+  color: var(--text-color);
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 3px 10px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+/* Klasės konkretiems mygtukams */
+/* Login mygtukas */
+
+.auth-login:hover {
+  background-color: #2980b9;
+  border-color: blue;
+}
+
+/* Register mygtukas */
+
+.auth-register:hover {
+  background-color: #c0392b;
+  border-color: red;
+}
+
+/* Logout mygtukas */
+
+.user-logout:hover {
+  background-color: #c0392b;
+}
+
+/* Profile mygtukas */
+
+.user-profile:hover {
+  background-color: #27ae60;
+}
