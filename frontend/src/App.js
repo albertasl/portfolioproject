@@ -7,7 +7,7 @@ import Blog from "./pages/Blog";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
+import RegisterForm from './components/RegisterForm';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<RegisterForm />} />
       </Routes>
       <Footer />
     </Router>

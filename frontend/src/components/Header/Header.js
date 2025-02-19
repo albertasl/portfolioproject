@@ -54,7 +54,7 @@ const Header = ({ isLoggedIn }) => {
                 ? "auth-register"
                 : item.name === "Logout"
                 ? "user-logout"
-                : "user-profile"
+                : "profile-link"
             }`}
           >
             {item.name}
