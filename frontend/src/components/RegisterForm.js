@@ -3,15 +3,23 @@ import React, { useState } from 'react';
 import { registerUser } from '../services/api';
 
 const RegisterForm = () => {
-  const [userData, setUserData] = useState({ username: '', email: '', password: '', role: '' });
+  const [userData, setUserData] = useState({ username: '', email: '', password: '', role: '', name: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Sending data:", userData); // Pridedame log'ą
+    if (!userData.username || !userData.email || !userData.password || !userData.name) {
+      alert("Please fill in all fields");
+      return;
+    }
+  
     try {
-      await registerUser(userData); // Tiesiog iškviečiame funkciją be kintamojo
-      alert('User registered successfully!');
+      const response = await registerUser(userData);
+      console.log("Registered User:", response); // Log'as API atsakymui
+      alert("User registered successfully!");
     } catch (error) {
-      alert(`Error: ${error.message}`);
+      console.error("Registration error:", error);
+      alert(`Error: ${error.message || "Registration failed"}`);
     }
   };
 
@@ -32,6 +40,10 @@ const RegisterForm = () => {
       <label>
         Password:
         <input type="password" name="password" value={userData.password} onChange={handleChange} />
+      </label>
+      <label>
+        Name:
+        <input type="text" name="name" value={userData.name} onChange={handleChange} />
       </label>
       <label>
         Role:

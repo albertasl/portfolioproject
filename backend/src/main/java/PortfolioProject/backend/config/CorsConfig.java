@@ -13,8 +13,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000") // React server
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
+                        .allowedOrigins("http://localhost:3000") // React frontend
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Leisti visus HTTP metodus
+                        .allowedHeaders("*") // Leisti visus headers
+                        .allowCredentials(true); // Jei naudojama autentifikacija su sesijomis
             }
         };
     }
